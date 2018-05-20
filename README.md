@@ -1,5 +1,7 @@
-Chopper, proyecto base ruby
-===========================
+Repositorio Personal de Victoria Vasquez
+
+
+[![Build Status](https://travis-ci.org/MVictoriaV/aydoo-2018-ruby.svg?branch=master)](https://travis-ci.org/MVictoriaV/aydoo-2018-ruby)
 
 
 ## Preparación del ambiente
