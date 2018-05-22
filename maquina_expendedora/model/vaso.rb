@@ -24,6 +24,10 @@ class Vaso
 
   def tiene_cafe?
   	contiene_cafe = @contenidos_liquido["CAFE"]
-  	return true
+  	return contiene_cafe
+  end
+
+  def tiene_azucar?
+  	return (@cantidad_de_azucar > 0)
   end
 end
