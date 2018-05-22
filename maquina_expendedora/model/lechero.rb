@@ -3,6 +3,6 @@ require_relative './vaso'
 class Lechero
 
   def cargar(un_vaso)
-  	un_vaso.agregar_leche
+  	un_vaso.agregar("LECHE")
   end
 end
