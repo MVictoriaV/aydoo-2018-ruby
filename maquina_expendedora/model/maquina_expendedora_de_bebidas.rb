@@ -1,6 +1,6 @@
 require_relative './vaso'
 require_relative './hacedor_de_cafe'
-require_relative './hacedor_de_te'
+require_relative './hacedor_de_te_con_leche'
 require_relative './azucarero'
 
 class MaquinaExpendedoraDeBebidas
