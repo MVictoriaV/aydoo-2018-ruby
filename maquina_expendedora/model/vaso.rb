@@ -1,7 +1,7 @@
 class Vaso
 
   attr_reader :cantidad_de_azucar
-  attr_reader :liquidos
+  attr_reader :contenidos_liquido
 
   def initialize
     @cantidad_de_azucar = 0
@@ -9,7 +9,7 @@ class Vaso
   end
 
   def preparar_vaso
-  	@liquidos = {"CAFE" => false, "TE" => false, "LECHE" => false}
+  	@contenidos_liquido = {"CAFE" => false, "TE" => false, "LECHE" => false}
   end
 
   def agregar_azucar(cantidad_azucar)
@@ -17,13 +17,13 @@ class Vaso
   end
 
   def agregar(contenido)
-  	if @liquidos.include?(contenido)
-      liquidos[contenido] = true
+  	if @contenidos_liquido.include?(contenido)
+      @contenidos_liquido[contenido] = true
     end
   end
 
   def tiene_cafe?
-  	contiene_cafe = @liquidos["CAFE"]
-  	return contiene_cafe
+  	contiene_cafe = @contenidos_liquido["CAFE"]
+  	return true
   end
 end
