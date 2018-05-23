@@ -12,9 +12,9 @@ class Vaso
   	@contenidos_liquido = {"CAFE" => false, "TE" => false, "LECHE" => false}
   end
 
-  def agregar(contenido)
-  	if @contenidos_liquido.include?(contenido)
-      @contenidos_liquido[contenido] = true
+  def recibir_contenido_liquido(contenido)
+    if @contenidos_liquido.include?(contenido)
+    	@contenidos_liquido[contenido] = true
     end
   end
 
