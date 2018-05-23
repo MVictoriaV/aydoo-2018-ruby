@@ -1,6 +1,6 @@
 class Vaso
 
-  attr_reader :cantidad_de_azucar
+  attr_accessor :cantidad_de_azucar
   attr_reader :contenidos_liquido
 
   def initialize
@@ -10,10 +10,6 @@ class Vaso
 
   def preparar_vaso
   	@contenidos_liquido = {"CAFE" => false, "TE" => false, "LECHE" => false}
-  end
-
-  def agregar_azucar(cantidad_azucar)
-  	@cantidad_de_azucar = cantidad_azucar
   end
 
   def agregar(contenido)

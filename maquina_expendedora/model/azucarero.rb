@@ -2,7 +2,7 @@ require_relative './vaso'
 
 class Azucarero
 
-  def agregar(un_vaso, cantidad_de_azucar)
-  	un_vaso.agregar_azucar(cantidad_de_azucar)
+  def agregar(un_vaso, cantidad_azucar)
+  	un_vaso.cantidad_de_azucar = cantidad_azucar
   end
 end
