@@ -1,6 +1,9 @@
 require_relative 'fibonacci_formateador'
+require_relative '../modules/utilitario'
 
 class FibonacciFormateadorPar < FibonacciFormateador
+
+  include Utilitario
 
   def initialize(sucession)
 	super
@@ -16,9 +19,4 @@ class FibonacciFormateadorPar < FibonacciFormateador
    end
    return sucession_par
   end
-
-  def es_par?(elemento)
-   return (elemento != 0 && elemento % 2 == 0)
-  end
-
 end
