@@ -7,8 +7,11 @@ describe Fibonacci do
 
   it 'retorna la serie Fibonacci con limite 3' do
     limite = 3
+    expect(subject.sucesion(limite)).to eq [0, 1, 1]
+  end
 
-    serie = [0, 1, 1]
-    expect(subject.sucesion(limite)).to eq serie
+  it 'retorna la serie Fibonacci con limite 7' do
+    limite = 7
+    expect(subject.sucesion(limite)).to eq [0, 1, 1, 2, 3, 5, 8]
   end
 end
