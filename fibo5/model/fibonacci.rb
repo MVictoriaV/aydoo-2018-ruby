@@ -6,8 +6,8 @@ class Fibonacci
     if (limite.nil? or limite < 1)
       raise ArgumentError.new('El limite de la serie debe ser un numero > 0')
     end
-    @invertido = es_invertido
     calcular_serie(limite)
+    invertir_serie(es_invertido)
   end
 
  private
@@ -22,4 +22,10 @@ class Fibonacci
   @sucesion = serie
  end
 
+ private
+ def invertir_serie(es_invertido)
+  if es_invertido
+    @sucesion = [1, 1, 0]    
+  end
+ end
 end

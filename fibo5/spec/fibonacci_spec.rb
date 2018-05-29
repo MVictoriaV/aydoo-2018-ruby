@@ -19,9 +19,10 @@ describe Fibonacci do
     expect { Fibonacci.new(-1) }.to raise_error ArgumentError, 'El limite de la serie debe ser un numero > 0'
   end
 
-  #it 'retorna la serie Fibonacci invertida con limite 3' do
-  #  limite = 3
-  #  fibonacci = Fibonacci.new(true, limite)
-  #  expect(fibonacci.sucesion).to eq [1, 1, 0]
-  #end
+  it 'retorna la serie Fibonacci invertida con limite 3' do
+    limite = 3
+    serie_invertida = true
+    fibonacci = Fibonacci.new(serie_invertida, limite)
+    expect(fibonacci.sucesion).to eq [1, 1, 0]
+  end
 end
