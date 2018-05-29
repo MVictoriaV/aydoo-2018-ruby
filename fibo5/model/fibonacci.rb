@@ -1,5 +1,8 @@
+require_relative '../modules/sumador'
+
 class Fibonacci
 
+  include Sumador
   attr_reader :sucesion
   attr_reader :limite_sucesion
 

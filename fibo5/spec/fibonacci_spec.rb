@@ -25,4 +25,11 @@ describe Fibonacci do
     fibonacci = Fibonacci.new(serie_invertida, limite)
     expect(fibonacci.sucesion).to eq [1, 1, 0]
   end
+
+  it 'retorna la sumatoria de la serie Fibonacci con limite 5 deberia dar 7 como resultado' do
+    limite = 5
+    fibonacci = Fibonacci.new(limite)
+    resultado = fibonacci.sumatoria(fibonacci.sucesion)
+    expect(resultado).to eq 7
+  end
 end
