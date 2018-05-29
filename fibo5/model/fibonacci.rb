@@ -1,6 +1,9 @@
 class Fibonacci
 
  def sucesion(limite)
+ 	if (limite.nil? or limite < 1)
+      raise ArgumentError.new('El limite de la serie debe ser un numero > 0')
+    end
  	calcular_serie(limite)
  end
 
