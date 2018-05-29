@@ -1,11 +1,14 @@
 class Fibonacci
 
- def sucesion(limite)
- 	if (limite.nil? or limite < 1)
+  attr_reader :sucesion
+
+  def initialize(es_invertido=false, limite)
+    if (limite.nil? or limite < 1)
       raise ArgumentError.new('El limite de la serie debe ser un numero > 0')
     end
- 	calcular_serie(limite)
- end
+    @invertido = es_invertido
+    calcular_serie(limite)
+  end
 
  private
  def calcular_serie(limite)
@@ -16,7 +19,7 @@ class Fibonacci
     serie.push(primer_valor)
     primer_valor,segundo_valor = segundo_valor,primer_valor+segundo_valor
   end
-  return serie
+  @sucesion = serie
  end
 
 end
