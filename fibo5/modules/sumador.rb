@@ -1,6 +1,10 @@
 module Sumador
 
  def sumatoria(listado)
-  return 7
+  total = 0
+  listado.each do |elemento|
+   total += elemento
+  end
+  return total
  end
 end
