@@ -8,7 +8,17 @@ class FibonacciFormateadorPar < FibonacciFormateador
   end
 
   def dar_formato
-  	return [2]
+   sucession_par = []
+   @sucession_con_formato.each do |elemento|
+    if (es_par?(elemento))
+     sucession_par.push(elemento)
+    end
+   end
+   return sucession_par
+  end
+
+  def es_par?(elemento)
+   return (elemento != 0 && elemento % 2 == 0)
   end
 
 end

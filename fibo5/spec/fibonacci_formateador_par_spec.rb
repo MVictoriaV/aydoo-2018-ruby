@@ -9,4 +9,11 @@ describe FibonacciFormateadorPar do
     expect(formateador.dar_formato).to eq [2]
 
   end
+
+  it 'retorna valores pares 2 y 8 de la serie Fibonacci con limite 7' do
+    
+    formateador = FibonacciFormateadorPar.new([0, 1, 1, 2, 3, 5, 8])
+    expect(formateador.dar_formato).to eq [2, 8]
+
+  end
 end
