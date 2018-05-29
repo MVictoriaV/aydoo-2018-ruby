@@ -28,4 +28,14 @@ describe 'Aplicacion Sinatra' do
       expect(cuerpo_parseado['fibonacci']['lista']).to eq [1, 1, 0]
     end
   end
+
+  describe '/fibonacci/3?sentido=directo' do
+    it 'deberia devolver la serie normal con limite 3 en formato json' do
+      get '/fibonacci/3?sentido=directo'
+
+      expect(last_response).to be_ok
+      cuerpo_parseado = JSON.parse(last_response.body)
+      expect(cuerpo_parseado['fibonacci']['lista']).to eq [0, 1, 1]
+    end
+  end
 end
