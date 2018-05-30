@@ -16,4 +16,8 @@ describe FibonacciFormateadorPar do
     expect(formateador.dar_formato).to eq [2, 8]
 
   end
+
+  it 'lanza mensaje de advertencia super cuando la sucesion ingresado es nil' do
+    expect { FibonacciFormateadorPar.new(nil) }.to raise_error ArgumentError, 'La sucesion no puede ser nil'
+  end
 end
