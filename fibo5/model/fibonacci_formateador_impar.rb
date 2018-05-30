@@ -13,7 +13,7 @@ class FibonacciFormateadorImpar < FibonacciFormateador
   def dar_formato
    sucession_impar = []
    @sucession_con_formato.each do |elemento|
-    unless (es_par?(elemento))
+    unless (elemento == 0 || es_par?(elemento))
      sucession_impar.push(elemento)
     end
    end
