@@ -41,4 +41,26 @@ describe 'Aplicacion Sinatra' do
       expect(cuerpo_parseado['fibonacci']['lista']).to eq [3, 2, 1, 1, 0]
     end
   end
+
+  describe '/fibonacci/5?solo=pares' do
+    it 'deberia devolver valor 2 para serie de Fibonacci con limite 5' do
+      get '/fibonacci/5?solo=pares'
+
+      expect(last_response).to be_ok
+      cuerpo_parseado = JSON.parse(last_response.body)
+      expect(cuerpo_parseado['fibonacci']['limite']).to eq 5
+      expect(cuerpo_parseado['fibonacci']['lista']).to eq [2]
+    end
+  end
+
+  describe '/fibonacci/5?solo=impares' do
+    it 'deberia devolver los valores 1 1 3 impares para serie de Fibonacci con limite 5' do
+      get '/fibonacci/5?solo=impares'
+
+      expect(last_response).to be_ok
+      cuerpo_parseado = JSON.parse(last_response.body)
+      expect(cuerpo_parseado['fibonacci']['limite']).to eq 5
+      expect(cuerpo_parseado['fibonacci']['lista']).to eq [1, 1, 3]
+    end
+  end
 end
